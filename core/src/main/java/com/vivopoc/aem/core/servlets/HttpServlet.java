@@ -2,21 +2,24 @@ package com.vivopoc.aem.core.servlets;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.apache.jackrabbit.commons.JcrUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
+import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
-import org.apache.sling.jcr.contentloader.ContentImporter;
+
 
 import javax.servlet.Servlet;
 import org.osgi.framework.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javax.jcr.Node;
-import javax.jcr.Repository;
-import javax.jcr.SimpleCredentials;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.jcr.Node;
+import javax.jcr.Session;
 import com.vivopoc.aem.core.interfaces.HttpService;
 
 
@@ -45,35 +48,18 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 	private HttpService httpService;
 	
 	@Reference
-	private ContentImporter contentImporter;
+    private ResourceResolverFactory resolverFactory;
+	
 	
 	@Override
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
 		
-		
-		
-		
-
-
-	     final Node node = request.getResource().adaptTo(Node.class);
 	     log.error("PASSSOU AQUI PRIMEIRO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		
 		try {
 			
-		//Create a connection to the CQ repository running on local host
-	    Repository repository = JcrUtils.getRepository("http://localhost:8080");
-	    log.error("PASSSOU AQUI >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-
-	   //Create a Session
-	   javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "admin".toCharArray()));
 	   
-	   //Create a node that represents the root node
-	   Node root = session.getRootNode();
-
-	   // Store content
-	   Node adobe = root.addNode("adobe");
-	   Node day = adobe.addNode("day");
-	   day.setProperty("message", "Adobe CQ is part of the Adobe Digital Marketing Suite!");
+	   
 			
 		String jsonResponse = httpService.makeHttpCall();
 		
@@ -81,7 +67,21 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 		 * Printing the json response on the browser
 		 */
 		response.getWriter().println(jsonResponse);
-		node.addNode(jsonResponse);
+		Map<String, Object> param = new HashMap<String, Object>();
+
+		param.put("admin", "admin");
+		//ResourceResolver resourceResolver = resolverFactory.getResourceResolver(param); 
+		ResourceResolver resourceResolver = resolverFactory.getAdministrativeResourceResolver(null); 
+		Session session = resourceResolver.adaptTo(Session.class);
+		Node root = session.getRootNode().getNode("content");
+		
+		// Store content
+		Node day = root.addNode("day");
+		day.setProperty("message", "Adobe CQ is part of the Adobe Digital Marketing Suite!");
+		
+		session.save();
+		session.logout();
+		log.error("PASSSOU AQUI DEPOIS DE SALVAR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		
 	
 		
@@ -90,5 +90,9 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 			log.error(e.getMessage(), e);
 		}
 	}
+	
+	
 
 }
+
+
