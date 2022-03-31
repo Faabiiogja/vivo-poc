@@ -15,12 +15,18 @@ import org.osgi.framework.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Type;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.jcr.Node;
 import javax.jcr.Session;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.vivopoc.aem.core.interfaces.HttpService;
+import com.vivopoc.aem.core.models.JsonModel;
 
 
 /**
@@ -67,6 +73,9 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 		 * Printing the json response on the browser
 		 */
 		response.getWriter().println(jsonResponse);
+		Type tipoArray = TypeToken.getParameterized(List.class, JsonModel.class).getType();
+		Gson conversor = new Gson();
+		List<JsonModel> lista = conversor.fromJson(jsonResponse, tipoArray);
 		Map<String, Object> param = new HashMap<String, Object>();
 
 		param.put("admin", "admin");
@@ -74,10 +83,23 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 		ResourceResolver resourceResolver = resolverFactory.getAdministrativeResourceResolver(null); 
 		Session session = resourceResolver.adaptTo(Session.class);
 		Node root = session.getRootNode().getNode("content");
+		Node node = root.addNode("commerce", "sling:Folder");
+		session.save();
+		Node folder =  session.getRootNode().getNode("content/commerce") ;
+		
+		for (JsonModel objeto : lista) {
+			
+			Node day = folder.addNode(String.valueOf(objeto.getId()), "nt:unstructured");
+			day.setProperty("title", objeto.getTitle());
+			day.setProperty("completed", objeto.isCompleted());
+			day.setProperty("userId", objeto.getUserId());
+			session.save();
+		}
+		
 		
 		// Store content
-		Node day = root.addNode("day");
-		day.setProperty("message", "Adobe CQ is part of the Adobe Digital Marketing Suite!");
+		
+		
 		
 		session.save();
 		session.logout();
@@ -89,6 +111,8 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 			
 			log.error(e.getMessage(), e);
 		}
+		
+		
 	}
 	
 	
