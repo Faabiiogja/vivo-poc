@@ -571,6 +571,23 @@ Bundle-DocURL:
     <!-- ====================================================================== -->
     <dependencyManagement>
         <dependencies>
+        	<dependency>
+				<groupId>org.apache.jackrabbit</groupId>
+				<artifactId>jackrabbit-standalone</artifactId>
+				<version>1.6.5</version>
+				<scope>test</scope>
+				</dependency>
+				
+				
+				
+				<dependency>
+				<groupId>org.apache.jackrabbit</groupId>
+				<artifactId>jackrabbit-jcr2dav</artifactId>
+				<version>2.21.10</version>
+				<scope>provided</scope>
+				</dependency>
+        
+        
             <!-- OSGi Dependencies -->
             <dependency>
                 <groupId>org.osgi</groupId>
