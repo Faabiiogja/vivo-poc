@@ -60,12 +60,8 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 	@Override
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
 		
-	     log.error("PASSSOU AQUI PRIMEIRO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-		
 		try {
-			
-	   
-	   
+			  
 			
 		String jsonResponse = httpService.makeHttpCall();
 		
@@ -103,7 +99,7 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 		
 		session.save();
 		session.logout();
-		log.error("PASSSOU AQUI DEPOIS DE SALVAR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
 		
 	
 		
