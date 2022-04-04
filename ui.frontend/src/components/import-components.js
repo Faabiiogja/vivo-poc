@@ -18,7 +18,7 @@ import withAsyncImport from "../utils/withAsyncImport";
 import './Page/Page';
 import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
-import './Navproducts/Navproducts' ;
+import './NavProducts/NavProducts' ;
 
 import {MapTo} from '@adobe/aem-react-editable-components';
 
@@ -50,7 +50,6 @@ import {
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
-const LazyNavComponent = withAsyncImport(() => import(`./Navproducts/Navproducts`));
 
 
 //lazyload / code splitting examples of external components
@@ -95,4 +94,3 @@ const TextEditConfig = {
 };
 
 MapTo('vivopoc/components/text')(LazyTextComponent, TextEditConfig);
-MapTo('vivopoc/components/navproducts')(LazyNavComponent, TextEditConfig);

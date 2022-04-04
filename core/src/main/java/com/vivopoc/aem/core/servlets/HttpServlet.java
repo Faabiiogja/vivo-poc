@@ -89,6 +89,7 @@ public class HttpServlet extends SlingSafeMethodsServlet {
 			day.setProperty("title", objeto.getTitle());
 			day.setProperty("completed", objeto.isCompleted());
 			day.setProperty("userId", objeto.getUserId());
+			day.setProperty("id", objeto.getId());
 			session.save();
 		}
 		

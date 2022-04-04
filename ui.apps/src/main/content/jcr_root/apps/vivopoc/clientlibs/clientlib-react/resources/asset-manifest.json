@@ -1,31 +1,31 @@
 {
   "files": {
     "main.css": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/css/main.935b7109.chunk.css",
-    "main.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/main.e9d7ec1d.chunk.js",
-    "main.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/main.e9d7ec1d.chunk.js.map",
-    "runtime-main.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/runtime-main.47521f8e.js",
-    "runtime-main.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/runtime-main.47521f8e.js.map",
-    "static/js/2.daead9fa.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/2.daead9fa.chunk.js",
-    "static/js/2.daead9fa.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/2.daead9fa.chunk.js.map",
-    "static/js/3.fcc6d0f6.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/3.fcc6d0f6.chunk.js",
-    "static/js/3.fcc6d0f6.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/3.fcc6d0f6.chunk.js.map",
+    "main.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/main.0ede4184.chunk.js",
+    "main.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/main.0ede4184.chunk.js.map",
+    "runtime-main.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/runtime-main.19f0754b.js",
+    "runtime-main.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/runtime-main.19f0754b.js.map",
+    "static/js/2.fa6ecf9a.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/2.fa6ecf9a.chunk.js",
+    "static/js/2.fa6ecf9a.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/2.fa6ecf9a.chunk.js.map",
+    "static/js/3.21656e4d.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/3.21656e4d.chunk.js",
+    "static/js/3.21656e4d.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/3.21656e4d.chunk.js.map",
     "static/css/4.61b50e66.chunk.css": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/css/4.61b50e66.chunk.css",
-    "static/js/4.5dcbf608.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/4.5dcbf608.chunk.js",
-    "static/js/4.5dcbf608.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/4.5dcbf608.chunk.js.map",
-    "static/js/5.a5d69ec1.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/5.a5d69ec1.chunk.js",
-    "static/js/5.a5d69ec1.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/5.a5d69ec1.chunk.js.map",
-    "static/js/6.631c98e2.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/6.631c98e2.chunk.js",
-    "static/js/6.631c98e2.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/6.631c98e2.chunk.js.map",
+    "static/js/4.8e8aabb4.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/4.8e8aabb4.chunk.js",
+    "static/js/4.8e8aabb4.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/4.8e8aabb4.chunk.js.map",
+    "static/js/5.a359b300.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/5.a359b300.chunk.js",
+    "static/js/5.a359b300.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/5.a359b300.chunk.js.map",
+    "static/js/6.d3aad5dc.chunk.js": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/6.d3aad5dc.chunk.js",
+    "static/js/6.d3aad5dc.chunk.js.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/6.d3aad5dc.chunk.js.map",
     "index.html": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/index.html",
     "static/css/4.61b50e66.chunk.css.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/css/4.61b50e66.chunk.css.map",
     "static/css/main.935b7109.chunk.css.map": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/css/main.935b7109.chunk.css.map",
-    "static/js/2.daead9fa.chunk.js.LICENSE.txt": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/2.daead9fa.chunk.js.LICENSE.txt",
-    "static/js/3.fcc6d0f6.chunk.js.LICENSE.txt": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/3.fcc6d0f6.chunk.js.LICENSE.txt"
+    "static/js/2.fa6ecf9a.chunk.js.LICENSE.txt": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/2.fa6ecf9a.chunk.js.LICENSE.txt",
+    "static/js/3.21656e4d.chunk.js.LICENSE.txt": "/etc.clientlibs/vivopoc/clientlibs/clientlib-react/resources/static/js/3.21656e4d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.47521f8e.js",
-    "static/js/2.daead9fa.chunk.js",
+    "static/js/runtime-main.19f0754b.js",
+    "static/js/2.fa6ecf9a.chunk.js",
     "static/css/main.935b7109.chunk.css",
-    "static/js/main.e9d7ec1d.chunk.js"
+    "static/js/main.0ede4184.chunk.js"
   ]
 }

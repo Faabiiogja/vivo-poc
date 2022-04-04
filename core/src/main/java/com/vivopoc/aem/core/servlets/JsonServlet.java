@@ -40,7 +40,6 @@ public class JsonServlet extends SlingAllMethodsServlet {
 			logger.info("About to call");
 
 			String data = jsonData.getJsonData();
-			logger.info("DATA IS " + data);
 			resp.getWriter().write(data);
 
 		} catch (Exception e) {
